@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--検索結果-->
@@ -17,33 +18,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BAk-dg-mP1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BAk-dg-mP1">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="nbh-ah-5DV">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="94" id="nbh-ah-5DV" customClass="FASPhotoTableViewCell">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nbh-ah-5DV" id="ftv-W6-s0S">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QXS-as-d7E">
+                                                    <rect key="frame" x="8" y="8" width="304" height="78"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QXS-as-d7E" firstAttribute="top" secondItem="ftv-W6-s0S" secondAttribute="topMargin" id="1bt-2S-fvE"/>
+                                                <constraint firstItem="QXS-as-d7E" firstAttribute="leading" secondItem="ftv-W6-s0S" secondAttribute="leadingMargin" id="hMp-0F-bgb"/>
+                                                <constraint firstItem="QXS-as-d7E" firstAttribute="trailing" secondItem="ftv-W6-s0S" secondAttribute="trailingMargin" id="hZx-ho-He4"/>
+                                                <constraint firstItem="QXS-as-d7E" firstAttribute="centerY" secondItem="ftv-W6-s0S" secondAttribute="centerY" id="mMG-Ho-MQq"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="flickrImageView" destination="ftv-W6-s0S" id="bcR-H9-bXD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="BAk-dg-mP1" secondAttribute="trailing" id="2Ce-4O-fRp"/>
-                            <constraint firstItem="BAk-dg-mP1" firstAttribute="leading" secondItem="hSR-Zn-IuX" secondAttribute="leading" id="4JM-y6-6iE"/>
-                            <constraint firstItem="BAk-dg-mP1" firstAttribute="bottom" secondItem="Ra6-8I-3eT" secondAttribute="top" id="VJO-FT-2y3"/>
-                            <constraint firstItem="BAk-dg-mP1" firstAttribute="top" secondItem="hSR-Zn-IuX" secondAttribute="top" id="Xi6-xU-8fY"/>
+                            <constraint firstItem="BAk-dg-mP1" firstAttribute="top" secondItem="hSR-Zn-IuX" secondAttribute="top" id="3d3-Nk-Ptf"/>
+                            <constraint firstItem="BAk-dg-mP1" firstAttribute="leading" secondItem="hSR-Zn-IuX" secondAttribute="leading" id="4Of-yc-aqM"/>
+                            <constraint firstAttribute="trailing" secondItem="BAk-dg-mP1" secondAttribute="trailing" id="9Kj-p8-bYE"/>
+                            <constraint firstItem="BAk-dg-mP1" firstAttribute="bottom" secondItem="Ra6-8I-3eT" secondAttribute="top" id="n9a-8h-CpO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="検索結果" id="fkD-WR-I6h">
-                        <barButtonItem key="rightBarButtonItem" title="Switch" id="hKT-ef-DlL"/>
+                        <barButtonItem key="rightBarButtonItem" title="Switch" id="hKT-ef-DlL">
+                            <connections>
+                                <action selector="switchAction:" destination="fyp-Nb-uNy" id="wAs-ln-wwt"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="BAk-dg-mP1" id="HfM-yB-NF5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UiH-no-SVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

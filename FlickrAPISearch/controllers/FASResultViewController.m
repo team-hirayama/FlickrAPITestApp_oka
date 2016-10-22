@@ -6,24 +6,88 @@
 //  Copyright © 2016年 nnsnodnb.moe. All rights reserved.
 //
 
+#import "FASPhotoModel.h"
 #import "FASResultViewController.h"
+#import "FASUsecase.h"
 
-@interface FASResultViewController ()
+@interface FASResultViewController () <UITableViewDataSource, LoadPhotosUsecase>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic) BOOL isGrid;
+@property (weak, nonatomic) NSArray<FASPhotoModel *> *dataSource;
+@property (nonatomic) NSInteger pageNumber;
+
+- (IBAction)switchAction:(id)sender;
 
 @end
-
-static NSString *const FASApiKey = @"10ba93bbe49a6480d765ce486673954a";
 
 @implementation FASResultViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@", self.searchWord);
+    [self setup];
+}
+
+- (void)setup {
+    FASUsecase *input = [FASUsecase new];
+    input.usecase = self;
+    self.pageNumber = 1;
+    [input requestWithSearchWord:self.searchWord Page:self.pageNumber];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 
+}
+
+- (IBAction)switchAction:(id)sender {
+    self.isGrid = !self.isGrid;
+    [self.tableView reloadData];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    if (self.isGrid) {
+        return 2;
+    } else {
+        return 1;
+    }
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataSource.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return [UITableViewCell new];
+}
+
+#pragma mark - LoadPhotosUsecase
+
+- (void)loadPhotoWithData:(NSArray<FASPhotoModel *> *)dataSource {
+    self.dataSource = dataSource;
+    [self.tableView reloadData];
+}
+
+- (void)loadPhotoWithNoData {
+    [self showNoDataAlert];
+}
+
+#pragma mark - Private method
+
+- (void)showNoDataAlert {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
+                                                                   message:@"該当する写真がありません。検索ワードを変更してお試しください。"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK"
+                                                 style:UIAlertActionStyleDefault
+                                               handler:nil];
+    [alert addAction:ok];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

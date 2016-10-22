@@ -19,11 +19,13 @@
 		CFD6753D1DBB1CE800C7C2BB /* FASSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD6753C1DBB1CE800C7C2BB /* FASSearch.storyboard */; };
 		CFD675421DBB1D4400C7C2BB /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD675411DBB1D4400C7C2BB /* Reachability.m */; };
 		CFD675461DBB1D7200C7C2BB /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD675451DBB1D7200C7C2BB /* XMLReader.m */; };
-		CFD675481DBB1D7F00C7C2BB /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = CFD675471DBB1D7F00C7C2BB /* .gitkeep */; };
-		CFD6754B1DBB1DAA00C7C2BB /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = CFD6754A1DBB1DAA00C7C2BB /* .gitkeep */; };
 		CFD6754D1DBB1EA500C7C2BB /* FASResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD6754C1DBB1EA500C7C2BB /* FASResult.storyboard */; };
 		CFD675501DBB1F0400C7C2BB /* FASResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD6754F1DBB1F0400C7C2BB /* FASResultViewController.m */; };
 		CFD675541DBB289400C7C2BB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD675531DBB289400C7C2BB /* SystemConfiguration.framework */; };
+		CFD675571DBB2D6C00C7C2BB /* FASUsecase.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD675561DBB2D6C00C7C2BB /* FASUsecase.m */; };
+		CFD6755A1DBB2FA800C7C2BB /* FASAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD675591DBB2FA800C7C2BB /* FASAPIClient.m */; };
+		CFD6755E1DBB2FC000C7C2BB /* FASPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD6755D1DBB2FC000C7C2BB /* FASPhotoModel.m */; };
+		CFD675621DBB378600C7C2BB /* FASPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD675611DBB378600C7C2BB /* FASPhotoTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,12 +70,18 @@
 		CFD675411DBB1D4400C7C2BB /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		CFD675441DBB1D7200C7C2BB /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
 		CFD675451DBB1D7200C7C2BB /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
-		CFD675471DBB1D7F00C7C2BB /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		CFD6754A1DBB1DAA00C7C2BB /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		CFD6754C1DBB1EA500C7C2BB /* FASResult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FASResult.storyboard; sourceTree = "<group>"; };
 		CFD6754E1DBB1F0400C7C2BB /* FASResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FASResultViewController.h; sourceTree = "<group>"; };
 		CFD6754F1DBB1F0400C7C2BB /* FASResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FASResultViewController.m; sourceTree = "<group>"; };
 		CFD675531DBB289400C7C2BB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CFD675551DBB2D6C00C7C2BB /* FASUsecase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FASUsecase.h; sourceTree = "<group>"; };
+		CFD675561DBB2D6C00C7C2BB /* FASUsecase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FASUsecase.m; sourceTree = "<group>"; };
+		CFD675581DBB2FA800C7C2BB /* FASAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FASAPIClient.h; sourceTree = "<group>"; };
+		CFD675591DBB2FA800C7C2BB /* FASAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FASAPIClient.m; sourceTree = "<group>"; };
+		CFD6755C1DBB2FC000C7C2BB /* FASPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FASPhotoModel.h; sourceTree = "<group>"; };
+		CFD6755D1DBB2FC000C7C2BB /* FASPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FASPhotoModel.m; sourceTree = "<group>"; };
+		CFD675601DBB378600C7C2BB /* FASPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FASPhotoTableViewCell.h; path = subviews/FASPhotoTableViewCell.h; sourceTree = "<group>"; };
+		CFD675611DBB378600C7C2BB /* FASPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FASPhotoTableViewCell.m; path = subviews/FASPhotoTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +195,7 @@
 		CFD675381DBB1C9A00C7C2BB /* views */ = {
 			isa = PBXGroup;
 			children = (
+				CFD6755F1DBB377200C7C2BB /* subviews */,
 				CFD675121DBB1BCF00C7C2BB /* LaunchScreen.storyboard */,
 				CFD6750D1DBB1BCF00C7C2BB /* Main.storyboard */,
 				CFD6753C1DBB1CE800C7C2BB /* FASSearch.storyboard */,
@@ -198,7 +207,10 @@
 		CFD675391DBB1CA000C7C2BB /* models */ = {
 			isa = PBXGroup;
 			children = (
-				CFD675471DBB1D7F00C7C2BB /* .gitkeep */,
+				CFD675581DBB2FA800C7C2BB /* FASAPIClient.h */,
+				CFD675591DBB2FA800C7C2BB /* FASAPIClient.m */,
+				CFD6755C1DBB2FC000C7C2BB /* FASPhotoModel.h */,
+				CFD6755D1DBB2FC000C7C2BB /* FASPhotoModel.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -253,9 +265,19 @@
 		CFD675491DBB1D9700C7C2BB /* usecase */ = {
 			isa = PBXGroup;
 			children = (
-				CFD6754A1DBB1DAA00C7C2BB /* .gitkeep */,
+				CFD675551DBB2D6C00C7C2BB /* FASUsecase.h */,
+				CFD675561DBB2D6C00C7C2BB /* FASUsecase.m */,
 			);
 			path = usecase;
+			sourceTree = "<group>";
+		};
+		CFD6755F1DBB377200C7C2BB /* subviews */ = {
+			isa = PBXGroup;
+			children = (
+				CFD675601DBB378600C7C2BB /* FASPhotoTableViewCell.h */,
+				CFD675611DBB378600C7C2BB /* FASPhotoTableViewCell.m */,
+			);
+			name = subviews;
 			sourceTree = "<group>";
 		};
 		F7BB39F6D0F4ED3D658923CA /* Frameworks */ = {
@@ -378,8 +400,6 @@
 				CFD675141DBB1BCF00C7C2BB /* LaunchScreen.storyboard in Resources */,
 				CFD675111DBB1BCF00C7C2BB /* Assets.xcassets in Resources */,
 				CFD6754D1DBB1EA500C7C2BB /* FASResult.storyboard in Resources */,
-				CFD675481DBB1D7F00C7C2BB /* .gitkeep in Resources */,
-				CFD6754B1DBB1DAA00C7C2BB /* .gitkeep in Resources */,
 				CFD6750F1DBB1BCF00C7C2BB /* Main.storyboard in Resources */,
 				CFD6753D1DBB1CE800C7C2BB /* FASSearch.storyboard in Resources */,
 			);
@@ -455,9 +475,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFD6750C1DBB1BCF00C7C2BB /* FASSearchViewController.m in Sources */,
+				CFD675571DBB2D6C00C7C2BB /* FASUsecase.m in Sources */,
+				CFD6755E1DBB2FC000C7C2BB /* FASPhotoModel.m in Sources */,
 				CFD675091DBB1BCF00C7C2BB /* AppDelegate.m in Sources */,
 				CFD675501DBB1F0400C7C2BB /* FASResultViewController.m in Sources */,
+				CFD6755A1DBB2FA800C7C2BB /* FASAPIClient.m in Sources */,
 				CFD675461DBB1D7200C7C2BB /* XMLReader.m in Sources */,
+				CFD675621DBB378600C7C2BB /* FASPhotoTableViewCell.m in Sources */,
 				CFD675421DBB1D4400C7C2BB /* Reachability.m in Sources */,
 				CFD675061DBB1BCF00C7C2BB /* main.m in Sources */,
 			);
