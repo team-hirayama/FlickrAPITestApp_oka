@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic) BOOL isGrid;
-@property (weak, nonatomic) NSArray<FASPhotoModel *> *dataSource;
+@property (nonatomic) NSArray<FASPhotoModel *> *dataSource;
 @property (nonatomic) NSInteger pageNumber;
 
 - (IBAction)switchAction:(id)sender;
@@ -34,6 +34,7 @@
 - (void)setup {
     FASUsecase *input = [FASUsecase new];
     input.usecase = self;
+    self.dataSource = [NSArray array];
     self.pageNumber = 1;
     [input requestWithSearchWord:self.searchWord Page:self.pageNumber];
     self.tableView.dataSource = self;
