@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uB4-Oc-WcF">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--検索-->
+        <scene sceneID="PJ5-hB-5Hh">
+            <objects>
+                <viewController storyboardIdentifier="FASSearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Na4-4K-jxd" customClass="FASSearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7mD-ra-s2Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="MDv-rg-eGR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ef5-cB-UpW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91p-Wb-A7y">
+                                <rect key="frame" x="38" y="244" width="245" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Y7-6T-jAQ">
+                                <rect key="frame" x="134" y="322" width="52" height="30"/>
+                                <state key="normal" title="検索"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="検索" id="R45-Ad-lY9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gtK-Al-awI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="364" y="565"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wIx-0A-KN6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uB4-Oc-WcF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E7D-4B-TCH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Na4-4K-jxd" kind="relationship" relationship="rootViewController" id="CE9-6q-2yy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fUL-ec-oJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-127" y="565"/>
+        </scene>
+    </scenes>
+</document>
