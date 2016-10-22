@@ -11,7 +11,7 @@
 
 @interface FASPhotoTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIView *flickrImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *flickrImageView;
 
 - (void)setConfigure:(FASPhotoModel *)model;
 

@@ -7,8 +7,10 @@
 //
 
 #import "FASPhotoModel.h"
+#import "FASPhotoTableViewCell.h"
 #import "FASResultViewController.h"
 #import "FASUsecase.h"
+
 
 @interface FASResultViewController () <UITableViewDataSource, LoadPhotosUsecase>
 
@@ -34,6 +36,7 @@
     input.usecase = self;
     self.pageNumber = 1;
     [input requestWithSearchWord:self.searchWord Page:self.pageNumber];
+    self.tableView.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,8 +64,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    FASPhotoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"
+                                                                  forIndexPath:indexPath];
+    [cell setConfigure:self.dataSource[indexPath.row]];
     
-    return [UITableViewCell new];
+    return cell;
 }
 
 #pragma mark - LoadPhotosUsecase

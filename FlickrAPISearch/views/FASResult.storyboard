@@ -41,7 +41,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="flickrImageView" destination="ftv-W6-s0S" id="bcR-H9-bXD"/>
+                                            <outlet property="flickrImageView" destination="QXS-as-d7E" id="TjX-hs-hmq"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

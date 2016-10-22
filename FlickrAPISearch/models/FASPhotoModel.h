@@ -10,9 +10,9 @@
 
 @interface FASPhotoModel : NSObject
 
-@property (nonatomic) NSString *photoId;
-@property (nonatomic) NSString *secret;
-@property (nonatomic) NSString *server;
-@property (nonatomic) NSString *farm;
+@property (nonatomic, nonnull) NSString *photoId;
+@property (nonatomic, nonnull) NSString *secret;
+@property (nonatomic, nonnull) NSString *server;
+@property (nonatomic, nonnull) NSString *farm;
 
 @end

@@ -24,7 +24,8 @@
 
 - (void)setConfigure:(FASPhotoModel *)model {
     NSString *url = [NSString stringWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@.jpg", model.farm, model.server, model.photoId, model.secret];
-    
+    [self.flickrImageView setImageWithURL:[NSURL URLWithString:url]
+                         placeholderImage:nil];
 }
 
 @end
