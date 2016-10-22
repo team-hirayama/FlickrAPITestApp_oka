@@ -23,6 +23,7 @@
 		CFD6754B1DBB1DAA00C7C2BB /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = CFD6754A1DBB1DAA00C7C2BB /* .gitkeep */; };
 		CFD6754D1DBB1EA500C7C2BB /* FASResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD6754C1DBB1EA500C7C2BB /* FASResult.storyboard */; };
 		CFD675501DBB1F0400C7C2BB /* FASResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD6754F1DBB1F0400C7C2BB /* FASResultViewController.m */; };
+		CFD675541DBB289400C7C2BB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD675531DBB289400C7C2BB /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		CFD6754C1DBB1EA500C7C2BB /* FASResult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FASResult.storyboard; sourceTree = "<group>"; };
 		CFD6754E1DBB1F0400C7C2BB /* FASResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FASResultViewController.h; sourceTree = "<group>"; };
 		CFD6754F1DBB1F0400C7C2BB /* FASResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FASResultViewController.m; sourceTree = "<group>"; };
+		CFD675531DBB289400C7C2BB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFD675541DBB289400C7C2BB /* SystemConfiguration.framework in Frameworks */,
 				7EB422A2935D94607C2447D7 /* libPods-FlickrAPISearch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +261,7 @@
 		F7BB39F6D0F4ED3D658923CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CFD675531DBB289400C7C2BB /* SystemConfiguration.framework */,
 				33ED26D39D0AEA3C0E0D9E09 /* libPods-FlickrAPISearch.a */,
 			);
 			name = Frameworks;
@@ -334,6 +338,7 @@
 				TargetAttributes = {
 					CFD675001DBB1BCF00C7C2BB = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = K72SHQ4B82;
 					};
 					CFD675191DBB1BCF00C7C2BB = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -600,10 +605,13 @@
 			baseConfigurationReference = 1E33B318B39D7327C1A07B0E /* Pods-FlickrAPISearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FlickrAPISearch/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = moe.nnsnodnb.FlickrAPISearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -612,10 +620,13 @@
 			baseConfigurationReference = 44B7552CA246A6760A524653 /* Pods-FlickrAPISearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FlickrAPISearch/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = moe.nnsnodnb.FlickrAPISearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

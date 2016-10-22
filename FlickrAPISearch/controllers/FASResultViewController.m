@@ -12,11 +12,13 @@
 
 @end
 
+static NSString *const FASApiKey = @"10ba93bbe49a6480d765ce486673954a";
+
 @implementation FASResultViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    NSLog(@"%@", self.searchWord);
 }
 
 - (void)didReceiveMemoryWarning {

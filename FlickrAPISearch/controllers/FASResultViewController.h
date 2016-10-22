@@ -10,4 +10,6 @@
 
 @interface FASResultViewController : UIViewController
 
+@property (nonnull) NSString *searchWord;
+
 @end
