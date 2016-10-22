@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--検索-->
@@ -17,17 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91p-Wb-A7y">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91p-Wb-A7y">
                                 <rect key="frame" x="38" y="244" width="245" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Y7-6T-jAQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Y7-6T-jAQ">
                                 <rect key="frame" x="134" y="322" width="52" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="t9A-st-7Np"/>
+                                </constraints>
                                 <state key="normal" title="検索"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="91p-Wb-A7y" firstAttribute="top" secondItem="7mD-ra-s2Y" secondAttribute="bottom" constant="180" id="96b-KM-8Ak"/>
+                            <constraint firstItem="91p-Wb-A7y" firstAttribute="centerX" secondItem="ef5-cB-UpW" secondAttribute="centerX" id="DYC-W4-sgs"/>
+                            <constraint firstItem="91p-Wb-A7y" firstAttribute="leading" secondItem="ef5-cB-UpW" secondAttribute="leadingMargin" constant="22" id="K5N-9p-0pg"/>
+                            <constraint firstItem="5Y7-6T-jAQ" firstAttribute="top" secondItem="91p-Wb-A7y" secondAttribute="bottom" constant="48" id="bNW-rN-1TM"/>
+                            <constraint firstItem="91p-Wb-A7y" firstAttribute="centerX" secondItem="5Y7-6T-jAQ" secondAttribute="centerX" id="u7h-ih-Uu5"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="検索" id="R45-Ad-lY9"/>
                 </viewController>
